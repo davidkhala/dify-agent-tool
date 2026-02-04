@@ -13,8 +13,7 @@ class AgentTool(Tool):
         user: str = tool_parameters.get("user")
         query: str = tool_parameters.get("query")
 
-        for m in chat(api_key, user, query):
+        lines = chat(api_key, user, query)
+
+        for m in lines :
             yield self.create_text_message(m)  # TODO is multiple round allowed?
-
-
-

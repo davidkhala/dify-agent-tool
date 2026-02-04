@@ -4,11 +4,14 @@ on: push
 jobs:
   test:
     runs-on: ubuntu-latest
+    environment: cloud
     steps:
       - uses: actions/checkout@main
       - uses: davidkhala/uv-buildpack@main
         with:
           test-entry-point: pytest
+        env:
+          AGENT_API_KEY: ${{secrets.AGENT_API_KEY}}
       - run: uv run --active main.py
         timeout-minutes: 1
         continue-on-error: true
