@@ -1,11 +1,11 @@
-version: 0.0.0
+version: 0.0.1
 type: plugin
 author: davidkhala
 name: dify-plugin
 label:
-  en_US: a dify plugin (manifest.label)
+  en_US: dify agent toolset (manifest.label)
 description:
-  en_US: a dify plugin (manifest.description)
+  en_US: manifest.description
 icon: icon.svg
 resource:
   memory: 268435456

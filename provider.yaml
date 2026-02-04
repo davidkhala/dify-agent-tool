@@ -1,6 +1,6 @@
 identity:
   author: davidkhala
-  name: dify-plugin
+  name: dify-agent-tool
   label:
     en_US: a dify plugin (provider.identity.label)
   description:
