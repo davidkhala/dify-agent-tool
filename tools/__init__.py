@@ -4,9 +4,17 @@ from typing import Any
 from dify_plugin import Tool
 from dify_plugin.entities.tool import ToolInvokeMessage
 
+from tools.core import chat
 
-class DifyExtractorTool(Tool):
+
+class AgentTool(Tool):
     def _invoke(self, tool_parameters: dict[str, Any]) -> Generator[ToolInvokeMessage]:
-        html_content:str = tool_parameters.get("html")
+        api_key: str = tool_parameters.get("api_key")  # FIXME should be put into tool credential
+        user: str = tool_parameters.get("user")
+        query: str = tool_parameters.get("query")
 
-        yield self.create_text_message("text")
+        for m in chat(api_key, user, query):
+            yield self.create_text_message(m)  # TODO is multiple round allowed?
+
+
+

@@ -3,20 +3,34 @@ identity:
   author: davidkhala
   label:
     en_US: a dify plugin (tool.identity.label)
-    
 description:
   human:
     en_US: a dify plugin (tool.description.human)
   llm: a dify plugin (tool.description.llm)
 parameters:
-  - name: html
+  - name: api_key
     type: string
     required: true
     label:
-      en_US: html text
+      en_US: api-key
     human_description:
-      en_US: the HTML content to be parsed
-    llm_description: the HTML content to be parsed
+      en_US: api-key of dify Agent app
+    form: form
+  - name: user
+    type: string
+    required: true
+    label:
+      en_US: user id
+    human_description:
+      en_US: user id, in format of 45bdc865-6d71-40ab-8892-af53906362fa
+    form: form
+  - name: query
+    type: string
+    label:
+      en_US: prompt
+    human_description:
+      en_US: user prompt for Agent
+    required: true
     form: llm
 
 extra:

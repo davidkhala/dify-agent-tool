@@ -1,8 +1,11 @@
 [project]
-name = "dify-plugin"
+name = "dify-agent-tool"
 version = "0"
+requires-python = ">=3.12"
 dependencies = [
     "dify-plugin",
+    "davidkhala.utils[http_request]",
+    "davidkhala.ai",
 ]
 
 [dependency-groups]
