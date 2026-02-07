@@ -1,7 +1,7 @@
 version: 0.0.1
 type: plugin
 author: davidkhala
-name: dify-plugin
+name: manifest-name
 label:
   en_US: dify agent toolset (manifest.label)
 description:

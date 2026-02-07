@@ -2,7 +2,7 @@ identity:
   author: davidkhala
   name: dify-agent-tool
   label:
-    en_US: a dify plugin (provider.identity.label)
+    en_US: Prompt Dify Agent App
   description:
     en_US: a dify plugin (provider.identity.description)
   icon: icon.svg

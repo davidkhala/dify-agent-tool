@@ -9,8 +9,8 @@ class ToolTestCase(unittest.TestCase):
         me = '45bdc865-6d71-40ab-8892-af53906362fa'
         rs = chat(api_key, me, "What are the specs of the iPhone 13 Pro Max?")
 
-        for r in rs:
-            print(r)
+
+        print(rs)
 
 
 if __name__ == '__main__':
