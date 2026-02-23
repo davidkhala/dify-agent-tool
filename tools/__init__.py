@@ -12,8 +12,9 @@ class AgentTool(Tool):
         api_key: str = tool_parameters.get("api_key")  # FIXME should be put into tool credential
         user: str = tool_parameters.get("user")
         query: str = tool_parameters.get("query")
+        base_url: str = tool_parameters.get("base_url")
 
-        lines = chat(api_key, user, query)
+        lines = chat(base_url, api_key, user, query)
 
         for m in lines :
-            yield self.create_text_message(m)  # TODO is multiple round allowed?
+            yield self.create_text_message(m)  # first yield must be text

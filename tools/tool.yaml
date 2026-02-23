@@ -8,6 +8,15 @@ description:
     en_US: a dify plugin (tool.description.human)
   llm: a dify plugin (tool.description.llm)
 parameters:
+  - name: base_url
+    type: string
+    required: false
+    default: "https://api.dify.ai/v1"
+    label:
+      en_US: base url
+    human_description:
+      en_US: base url of dify instance
+    form: form
   - name: api_key
     type: string
     required: true
